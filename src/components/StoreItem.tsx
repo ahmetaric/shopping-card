@@ -33,7 +33,9 @@ export default function StoreItem({ id, name, price, imgUrl }:StoreItemsProps) {
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
-            <Button className="w-100">+ Add To Cart</Button>
+            <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
+              + Add To Cart
+            </Button>
           ) : (
             <div
               className="d-flex align-items-center flex-column"
@@ -50,10 +52,7 @@ export default function StoreItem({ id, name, price, imgUrl }:StoreItemsProps) {
 
                 <Button>+</Button>
               </div>
-              <Button
-                variant="danger"
-                size="sm"
-              >
+              <Button variant="danger" size="sm">
                 Remove
               </Button>
             </div>
