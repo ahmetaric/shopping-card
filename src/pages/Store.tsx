@@ -2,7 +2,7 @@ import storeItems from "../data/items.json";
 import {Row,Col} from "react-bootstrap";
 import StoreItem from "../components/StoreItem";
 
-export default function Store() {
+export function Store() {
   return (
     <>
       <h1>Store</h1>
